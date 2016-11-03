@@ -18,40 +18,39 @@ categories: oj
 小。
 
 #### 代码
-·
-    int max(int a, int b){
-                    return a > b ? a : b;
-                }
-                int lengthOfLongestSubstring(char* s){
-                    int tmp[256];
-                    int maxsub = 0;
-                    int i = 0, j = 0;
-                    int n = 0;
-                    memset(tmp, -1, 256);
-                    n = strlen(s);
-                    while (j < n){
-                        if (tmp[s[j]] == 1){
-                            maxsub = max(maxsub, j - i);
-                            while (s[i] != s[j]){
-                                tmp[s[i]] = -1;
-                                i++;
-                            }
-                            i++;
-                            j++;
-                        }
-                        else{
-                            tmp[s[j]] = 1;
-                            j++;
-                        }
-                    }
-                    maxsub = max(maxsub, n - i);
-                    if (n == 0){
-                        return 0;
-                    }
-                    else{
-                        return maxsub;
-                    }
-
-                }
-·
+```
+int max(int a, int b){
+      return a > b ? a : b;
+}
+int lengthOfLongestSubstring(char* s){
+    int tmp[256];
+    int maxsub = 0;
+    int i = 0, j = 0;
+    int n = 0;
+    memset(tmp, -1, 256);
+    n = strlen(s);
+    while (j < n){
+        if (tmp[s[j]] == 1){
+            maxsub = max(maxsub, j - i);
+            while (s[i] != s[j]){
+                tmp[s[i]] = -1;
+                i++;
+            }
+            i++;
+            j++;
+        }
+        else{
+            tmp[s[j]] = 1;
+            j++;
+        }
+    }
+    maxsub = max(maxsub, n - i);
+    if (n == 0){
+        return 0;
+    }
+    else{
+        return maxsub;
+    }
+}
+```
             

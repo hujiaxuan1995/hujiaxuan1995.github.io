@@ -31,33 +31,33 @@ sass --watch <要编译的Sass文件路径>/style.scss:<要输出CSS文件路径
 * 嵌套输出方式nested
   <span style="color:dark !important;">`sass --watch test.scss:test.css --style nested`</span>
   编译出的CSS样式风格：
-  ·
-                    div{
-                     position: relative;
-                     height :100px;
-                     width: 100px; }
-  ·
+```
+  div{
+   position: relative;
+   height :100px;
+   width: 100px; }
+```
   可见这样编译出的代码是相当整洁的，但是不利于存储和加载。
 
 * 展开输出方式expanded
    <span style="color:dark !important;">`sass --watch test.scss:test.css --style expanded`</span>
     编译出的CSS样式风格：
-    ·
-                div{
-                     position: relative;
-                     height :100px;
-                     width: 100px; 
-                     }
-    ·
+```
+   div{
+        position: relative;
+        height :100px;
+        width: 100px; 
+        }
+```
     与nested类似。
     
 * 紧凑输出方式 compact
     <span style="color:dark !important;">`sass --watch test.scss:test.css --style compact`</span>
     编译出的CSS样式风格：
-    ·
+```
      div1{position: relative;height :100px;width: 100px; }
      div2{position: relative;height :100px;width: 100px; }
-    ·
+```
 
 * 压缩输出方式 compressed
   <span style="color:dark !important;">`sass --watch test.scss:test.css --style compressed`</span>
