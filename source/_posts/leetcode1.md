@@ -18,7 +18,7 @@ categories: oj
 小。
 
 #### 代码
-```
+```C++
 int max(int a, int b){
       return a > b ? a : b;
 }
